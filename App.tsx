@@ -5,14 +5,16 @@
  * @format
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import StackNavigator from './src/navigator/StackNavigator';
+import TabNavigator from './src/navigator/TabNavigator';
 
 function App(): React.JSX.Element {
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
   return (
     <NavigationContainer>
-      <StackNavigator />
+      {isLoggedIn ? <TabNavigator /> : <StackNavigator />}
     </NavigationContainer>
   );
 }
