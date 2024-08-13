@@ -1,5 +1,6 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
+import {globalStyles} from '../../styles';
 
 type PropTypes = {
   navigation: any;
@@ -8,18 +9,12 @@ type PropTypes = {
 export default function Home(props: PropTypes) {
   const {navigation} = props;
   return (
-    <View>
-      <Text style={styles.fontSize}>I am home. lets go to somewhere else</Text>
+    <View style={globalStyles.container}>
+      <Text>I am home. lets go to somewhere else</Text>
       <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Auth')}
+        title="Go to Details ff"
+        onPress={() => navigation.navigate('Login')}
       />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  fontSize: {
-    fontSize: 22,
-  },
-});

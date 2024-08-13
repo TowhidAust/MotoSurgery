@@ -1,15 +1,33 @@
+/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import Signup from '../screens/Auth/Signup';
 import Login from '../screens/Auth/Login';
-import Home from '../screens/Home/Home';
+import HomeStackScreen from './stackScreens/Home/HomeStackScreen';
 
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} />
+    <Tab.Navigator
+      screenOptions={({route}) => ({
+        tabBarIcon: ({focused, color, size}) => {
+          let iconName = 'home';
+          if (route.name === 'Home') {
+            iconName = focused ? 'home' : 'home';
+          } else if (route.name === 'Login') {
+            iconName = focused ? 'person' : 'person';
+          }
+
+          // You can return any component that you like here!
+          return <Icon name={iconName} size={size} color={color} />;
+        },
+        tabBarActiveTintColor: 'tomato',
+        tabBarInactiveTintColor: 'gray',
+        headerShown: false,
+      })}>
+      <Tab.Screen name="HomeStack" component={HomeStackScreen} />
       <Tab.Screen name="Login" component={Login} />
       <Tab.Screen name="Signup" component={Signup} />
     </Tab.Navigator>

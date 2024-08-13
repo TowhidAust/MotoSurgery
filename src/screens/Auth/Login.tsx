@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-export default function Login({navigation}) {
-  const [text, onChangeText] = React.useState('Useless Text');
-  const [number, onChangeNumber] = React.useState('');
+type PropTypes = {
+  navigation: any;
+};
+
+export default function Login(props: PropTypes) {
+  const [text, onChangeText] = useState('Useless Text');
+  const [number, onChangeNumber] = useState('');
+  const {navigation} = props;
 
   return (
     <SafeAreaView>
