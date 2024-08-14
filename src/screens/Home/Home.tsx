@@ -11,6 +11,7 @@ export default function Home(props: PropTypes) {
   return (
     <View style={globalStyles.container}>
       <Text>I am home. lets go to somewhere else</Text>
+      <Picker />
       <Button title="Submit" onPress={() => navigation.navigate('Login')} />
     </View>
   );
