@@ -11,10 +11,7 @@ export default function Home(props: PropTypes) {
   return (
     <View style={globalStyles.container}>
       <Text>I am home. lets go to somewhere else</Text>
-      <Button
-        title="Go to Details ff"
-        onPress={() => navigation.navigate('Login')}
-      />
+      <Button title="Submit" onPress={() => navigation.navigate('Login')} />
     </View>
   );
 }
