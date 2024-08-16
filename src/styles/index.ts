@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export const globalStyles = StyleSheet.create({
   container: {
-    padding: 5,
+    padding: 16,
   },
 
   title: {
