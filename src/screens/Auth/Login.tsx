@@ -6,7 +6,7 @@ type PropTypes = {
   navigation: any;
 };
 
-export default function Login(props: PropTypes) {
+const Login = (props: PropTypes) => {
   const [text, onChangeText] = useState('Useless Text');
   const [number, onChangeNumber] = useState('');
   const {navigation} = props;
@@ -37,7 +37,7 @@ export default function Login(props: PropTypes) {
       />
     </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -57,3 +57,5 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
   },
 });
+
+export default Login;

@@ -1,9 +1,11 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-export default function Signup() {
+const Signup = () => {
   return (
     <View>
       <Text>asd</Text>
     </View>
   );
-}
+};
+
+export default Signup;

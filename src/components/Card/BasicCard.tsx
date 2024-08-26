@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import {globalStyles} from '../../styles';
 
 type PropTypes = {
   title: string;
@@ -10,7 +11,9 @@ const BasicCard = (props: PropTypes) => {
   const {title, children} = props;
   return (
     <View style={styles.card}>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={[globalStyles.title, globalStyles.customFontFamily]}>
+        {title}
+      </Text>
       <View style={styles.content}>{children}</View>
     </View>
   );
@@ -26,10 +29,6 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 2},
     shadowRadius: 4,
     elevation: 2,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
   },
   content: {
     marginTop: 4,

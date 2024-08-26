@@ -9,4 +9,7 @@ export const globalStyles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
   },
+  customFontFamily: {
+    fontFamily: 'OpenSans-Regular',
+  },
 });
