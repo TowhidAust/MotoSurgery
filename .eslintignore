@@ -9,3 +9,7 @@ dist/
 
 # Ignore specific file
 src/ignored-file.js
+
+components
+babel.config.js
+metro.config.js

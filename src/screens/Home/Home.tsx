@@ -1,94 +1,67 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
-import {globalStyles} from '../../styles';
-import BasicCard from '../../components/Card/BasicCard';
+import {Image, ScrollView, StyleSheet, View} from 'react-native';
+import {globalStyles} from '@/src/styles';
+import {Card} from '@/components/ui/card';
+import {Heading} from '@/components/ui/heading';
+import {Text} from '@/components/ui/text';
 
 const Home = () => {
   return (
     <ScrollView>
       <View style={globalStyles.container}>
-        <Text style={[globalStyles.title, styles.sectionTitle]}>
-          Workshop Nearby
-        </Text>
-        <View style={styles.cardContainer}>
-          <BasicCard title="Gear X Bangladesh">
-            <View>
-              <Text style={[globalStyles.customFontFamily, styles.description]}>
-                All Kind of moto parts is available here.
+        <Heading
+          className="mt-0 mb-4"
+          size="2xl"
+          style={globalStyles.fontFamilyRegular}>
+          Nearby
+        </Heading>
+        <Card className="rounded-lg p-5" size="md" variant="elevated">
+          <View style={styles.cardInnerContainer}>
+            <View style={styles.logoContainer}>
+              <Image
+                style={styles.logo}
+                source={{
+                  uri: 'https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?size=338&ext=jpg&ga=GA1.1.1413502914.1724716800&semt=ais_hybrid',
+                }}
+              />
+            </View>
+            <View style={styles.titleDescriptionContainer}>
+              <Heading
+                className="mt-0 mb-1"
+                size="2xl"
+                style={globalStyles.fontFamilyRegular}>
+                Shop Name
+              </Heading>
+              <Text
+                className="mt-0 text-justify"
+                style={globalStyles.fontFamilyRegular}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                dignissimos odit ducimus dolor similique, quaerat.
               </Text>
             </View>
-          </BasicCard>
-        </View>
-        <View style={styles.cardContainer}>
-          <BasicCard title="Moto Station">
-            <View>
-              <Text style={[globalStyles.customFontFamily, styles.description]}>
-                All Kind of moto parts is available here.
-              </Text>
-            </View>
-          </BasicCard>
-        </View>
-        <View style={styles.cardContainer}>
-          <BasicCard title="Bike Station BD">
-            <View>
-              <Text style={[globalStyles.customFontFamily, styles.description]}>
-                All Kind of moto parts is available here.
-              </Text>
-            </View>
-          </BasicCard>
-        </View>
-        <View style={styles.cardContainer}>
-          <BasicCard title="Moto Mechanic">
-            <View>
-              <Text style={[globalStyles.customFontFamily, styles.description]}>
-                All Kind of moto parts is available here.
-              </Text>
-            </View>
-          </BasicCard>
-        </View>
-        <View style={styles.cardContainer}>
-          <BasicCard title="Moto Gears">
-            <View>
-              <Text style={[globalStyles.customFontFamily, styles.description]}>
-                All Kind of moto parts is available here.
-              </Text>
-            </View>
-          </BasicCard>
-        </View>
-        <View style={styles.cardContainer}>
-          <BasicCard title="Bike BD">
-            <View>
-              <Text style={[globalStyles.customFontFamily, styles.description]}>
-                All Kind of moto parts is available here.
-              </Text>
-            </View>
-          </BasicCard>
-        </View>
-        <View style={styles.cardContainer}>
-          <BasicCard title="BD Motorcycle">
-            <View>
-              <Text style={[globalStyles.customFontFamily, styles.description]}>
-                All Kind of moto parts is available here.
-              </Text>
-            </View>
-          </BasicCard>
-        </View>
+          </View>
+        </Card>
       </View>
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  cardContainer: {
-    marginBottom: 10,
+  cardInnerContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  description: {
-    textAlign: 'justify',
-    fontSize: 16,
+  logoContainer: {
+    flex: 1,
   },
-  sectionTitle: {
-    marginBottom: 10,
+  titleDescriptionContainer: {
+    flex: 5,
+  },
+  logo: {
+    width: 50,
+    height: 50,
+    borderRadius: 50,
   },
 });
-
 export default Home;

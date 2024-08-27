@@ -50,6 +50,7 @@
 		78ACE4E174104C4DBDD831F3 /* OpenSans_SemiCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F3AC3D0EB17418A920FC726 /* OpenSans_SemiCondensed-Regular.ttf */; };
 		17AA2A17E23840FFB25728E6 /* OpenSans_SemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19BD0A82061C4CD68E1897AA /* OpenSans_SemiCondensed-SemiBold.ttf */; };
 		D545919998B245448E037E84 /* OpenSans_SemiCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC787F0FEDC946088F7A011A /* OpenSans_SemiCondensed-SemiBoldItalic.ttf */; };
+		6948547887B8451C9A3D4E77 /* Telenor-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7C587BBE20ED4A15A9D48456 /* Telenor-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		4F3AC3D0EB17418A920FC726 /* OpenSans_SemiCondensed-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans_SemiCondensed-Regular.ttf"; path = "../src/assets/fonts/OpenSans_SemiCondensed-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		19BD0A82061C4CD68E1897AA /* OpenSans_SemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; name = "OpenSans_SemiCondensed-SemiBold.ttf"; path = "../src/assets/fonts/OpenSans_SemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		AC787F0FEDC946088F7A011A /* OpenSans_SemiCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans_SemiCondensed-SemiBoldItalic.ttf"; path = "../src/assets/fonts/OpenSans_SemiCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7C587BBE20ED4A15A9D48456 /* Telenor-Regular.otf */ = {isa = PBXFileReference; name = "Telenor-Regular.otf"; path = "../src/assets/fonts/Telenor-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 				4F3AC3D0EB17418A920FC726 /* OpenSans_SemiCondensed-Regular.ttf */,
 				19BD0A82061C4CD68E1897AA /* OpenSans_SemiCondensed-SemiBold.ttf */,
 				AC787F0FEDC946088F7A011A /* OpenSans_SemiCondensed-SemiBoldItalic.ttf */,
+				7C587BBE20ED4A15A9D48456 /* Telenor-Regular.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				78ACE4E174104C4DBDD831F3 /* OpenSans_SemiCondensed-Regular.ttf in Resources */,
 				17AA2A17E23840FFB25728E6 /* OpenSans_SemiCondensed-SemiBold.ttf in Resources */,
 				D545919998B245448E037E84 /* OpenSans_SemiCondensed-SemiBoldItalic.ttf in Resources */,
+				6948547887B8451C9A3D4E77 /* Telenor-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
