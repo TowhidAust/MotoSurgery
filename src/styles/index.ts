@@ -4,15 +4,14 @@ export const globalStyles = StyleSheet.create({
   container: {
     padding: 16,
   },
-
   title: {
     fontSize: 22,
     fontWeight: 'bold',
   },
-  fontFamilyRegular: {
-    fontFamily: 'OpenSans-Regular',
+  fontRegular: {
+    fontSize: 12,
   },
-  fontFamilyBold: {
-    fontFamily: 'OpenSans-Bold',
+  fontFamilyRegular: {
+    fontFamily: 'Telenor-Regular',
   },
 });

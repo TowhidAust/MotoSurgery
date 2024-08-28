@@ -24,10 +24,19 @@ export default function TabNavigator() {
           return <Icon name={iconName} size={size} color={color} />;
         },
         tabBarActiveTintColor: 'tomato',
-        tabBarInactiveTintColor: 'gray',
-        headerShown: false,
+        // tabBarInactiveTintColor: 'gray',
+        tabBarLabelStyle: {
+          fontFamily: 'Telenor-Regular',
+          fontSize: 12,
+        },
+
+        tabBarStyle: {
+          paddingTop: 8,
+          paddingBottom: 8,
+          height: 55,
+        },
       })}>
-      <Tab.Screen name="HomeStack" component={HomeStackScreen} />
+      <Tab.Screen name="Home" component={HomeStackScreen} />
       <Tab.Screen name="Login" component={Login} />
       <Tab.Screen name="Signup" component={Signup} />
     </Tab.Navigator>
