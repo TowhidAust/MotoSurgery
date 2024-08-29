@@ -12,6 +12,6 @@ export const globalStyles = StyleSheet.create({
     fontSize: 12,
   },
   fontFamilyRegular: {
-    fontFamily: 'Telenor-Regular',
+    fontFamily: 'OpenSans-Regular',
   },
 });
