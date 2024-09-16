@@ -146,6 +146,10 @@
       "sha1": "44c7798ee52de7a6249a30d6675862785814298e"
     },
     {
+      "path": "src/assets/fonts/Telenor-Bold.otf",
+      "sha1": "48ea0712543622985931974096f20d1907d66e70"
+    },
+    {
       "path": "src/assets/fonts/Telenor-Regular.otf",
       "sha1": "faded18d288c52e4767f0855536a26314528c943"
     }

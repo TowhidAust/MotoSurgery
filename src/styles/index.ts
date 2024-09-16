@@ -9,9 +9,12 @@ export const globalStyles = StyleSheet.create({
     fontWeight: 'bold',
   },
   fontRegular: {
-    fontSize: 12,
+    fontSize: 16,
   },
   fontFamilyRegular: {
-    fontFamily: 'OpenSans-Regular',
+    fontFamily: 'Telenor-Regular',
+  },
+  fontFamilyBold: {
+    fontFamily: 'Telenor-Bold',
   },
 });
