@@ -37,7 +37,7 @@ export default function TabNavigator() {
           height: 55,
         },
       })}>
-      <Tab.Screen name="HomeScreen" component={HomeStackScreen} />
+      <Tab.Screen name="Home" component={HomeStackScreen} />
       <Tab.Screen name="Login" component={Login} />
       <Tab.Screen name="Signup" component={Signup} />
     </Tab.Navigator>

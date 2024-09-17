@@ -49,6 +49,8 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Telenor-Regular.otf</string>
+		<string>Telenor-Bold.otf</string>
 		<string>OpenSans-Bold.ttf</string>
 		<string>OpenSans-BoldItalic.ttf</string>
 		<string>OpenSans-ExtraBold.ttf</string>
@@ -85,8 +87,27 @@
 		<string>OpenSans_SemiCondensed-Regular.ttf</string>
 		<string>OpenSans_SemiCondensed-SemiBold.ttf</string>
 		<string>OpenSans_SemiCondensed-SemiBoldItalic.ttf</string>
-		<string>Telenor-Regular.otf</string>
-		<string>Telenor-Bold.otf</string>
+		<string>VictorMono-Bold.ttf</string>
+		<string>VictorMono-BoldItalic.ttf</string>
+		<string>VictorMono-BoldOblique.ttf</string>
+		<string>VictorMono-ExtraLight.ttf</string>
+		<string>VictorMono-ExtraLightItalic.ttf</string>
+		<string>VictorMono-ExtraLightOblique.ttf</string>
+		<string>VictorMono-Italic.ttf</string>
+		<string>VictorMono-Light.ttf</string>
+		<string>VictorMono-LightItalic.ttf</string>
+		<string>VictorMono-LightOblique.ttf</string>
+		<string>VictorMono-Medium.ttf</string>
+		<string>VictorMono-MediumItalic.ttf</string>
+		<string>VictorMono-MediumOblique.ttf</string>
+		<string>VictorMono-Oblique.ttf</string>
+		<string>VictorMono-Regular.ttf</string>
+		<string>VictorMono-SemiBold.ttf</string>
+		<string>VictorMono-SemiBoldItalic.ttf</string>
+		<string>VictorMono-SemiBoldOblique.ttf</string>
+		<string>VictorMono-Thin.ttf</string>
+		<string>VictorMono-ThinItalic.ttf</string>
+		<string>VictorMono-ThinOblique.ttf</string>
 	</array>
 </dict>
 </plist>

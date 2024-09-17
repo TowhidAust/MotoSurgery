@@ -11,11 +11,12 @@ export default function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen
-        name="Home"
+        name="HomeScreen"
         component={Home}
         options={{
           headerShown: true,
           headerTitleStyle: globalStyles.fontFamilyRegular,
+          title: 'Home',
         }}
       />
       <HomeStack.Screen name="Login" component={Login} />
