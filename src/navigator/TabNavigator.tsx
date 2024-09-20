@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Signup from '@/src/screens/Auth/Signup';
 import Login from '@/src/screens/Auth/Login';
 import HomeStackScreen from '@/src/navigator/stackScreens/Home/HomeStackScreen';
+import {globalStyles} from '../styles';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,15 +27,15 @@ export default function TabNavigator() {
         },
         tabBarActiveTintColor: 'tomato',
         // tabBarInactiveTintColor: 'gray',
-        tabBarLabelStyle: {
-          fontFamily: 'Telenor-Regular',
-          fontSize: 12,
-        },
+        tabBarLabelStyle: [
+          globalStyles.fontFamilyRegular,
+          globalStyles.fontRegular,
+        ],
 
         tabBarStyle: {
           paddingTop: 8,
           paddingBottom: 8,
-          height: 55,
+          height: 60,
         },
       })}>
       <Tab.Screen name="Home" component={HomeStackScreen} />
