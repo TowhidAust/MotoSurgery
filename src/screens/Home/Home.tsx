@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import {Pressable, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {Pressable, ScrollView, StyleSheet, View} from 'react-native';
 import {globalStyles} from '@/src/styles';
 import {servicePakage} from '@/src/types';
-import {Button, Card} from 'react-native-paper';
+import {Card, Text} from 'react-native-paper';
 
 type PropTypes = {
   navigation: any;
@@ -48,36 +48,22 @@ export default function Home(props: PropTypes) {
         <Pressable
           onPress={e => {
             e.persist();
+            console.log('going to package');
             navigation.navigate('Package');
           }}>
           {serviceList?.map(item => {
             return (
-              <Card style={styles.cardContainer}>
+              <Card style={styles.cardContainer} key={item?.id}>
+                <Card.Title
+                  title={
+                    <Text variant="headlineSmall">Lorem {item?.title}</Text>
+                  }
+                  subtitle={<Text>TK {item?.price}</Text>}
+                />
                 <Card.Content>
-                  <View key={item?.id}>
-                    <Text style={globalStyles.fontFamilyBold}>
-                      {item?.title}
-                    </Text>
-                    <Text style={globalStyles.fontFamilyRegular}>
-                      {item?.price}
-                    </Text>
-                    <Text
-                      style={[
-                        globalStyles.fontFamilyRegular,
-                        globalStyles.fontRegular,
-                      ]}>
-                      {item?.description}
-                    </Text>
-                  </View>
-                  <Card.Actions>
-                    <Button
-                      onPress={e => {
-                        e.persist();
-                        navigation.navigate('Package');
-                      }}>
-                      See Details
-                    </Button>
-                  </Card.Actions>
+                  <Text style={globalStyles.fontRegular}>
+                    {item?.description}
+                  </Text>
                 </Card.Content>
               </Card>
             );

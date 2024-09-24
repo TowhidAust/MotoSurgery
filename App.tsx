@@ -8,15 +8,18 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import TabNavigator from './src/navigator/TabNavigator';
-import {MD3LightTheme as DefaultTheme, PaperProvider} from 'react-native-paper';
-
-const theme = {
-  ...DefaultTheme,
+import {configureFonts, MD3LightTheme, PaperProvider} from 'react-native-paper';
+const fontConfig: any = {
+  fontFamily: 'Telenor-Regular',
+};
+const theme: any = {
+  ...MD3LightTheme,
   colors: {
-    ...DefaultTheme.colors,
+    ...MD3LightTheme.colors,
     primary: 'tomato',
     secondary: 'yellow',
   },
+  fonts: configureFonts({config: fontConfig}),
 };
 
 function App(): React.JSX.Element {
