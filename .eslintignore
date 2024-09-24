@@ -9,6 +9,8 @@ dist/
 
 # Ignore specific file
 src/ignored-file.js
+index.js
+react-native.config.js
 
 components
 babel.config.js
