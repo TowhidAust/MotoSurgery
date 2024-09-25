@@ -13,8 +13,8 @@ export default function Home(props: PropTypes) {
   const [serviceList] = useState<servicePakage[]>([
     {
       id: 'uuid1',
-      title: 'Regular service',
-      price: 200,
+      title: 'Regular Service',
+      price: 700,
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos reiciendis accusamus esse mollitia aut',
       features: [
@@ -26,14 +26,53 @@ export default function Home(props: PropTypes) {
     },
     {
       id: 'uuid2',
-      title: 'Premium service',
-      price: 1200,
+      title: 'Bike Wash & Polish',
+      price: 200,
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos reiciendis accusamus esse mollitia aut',
       features: [
         {
           title: 'Air filter clean/change',
-          description: 'Additional charges may apply',
+          description: 'No description',
+        },
+      ],
+    },
+    {
+      id: 'uuid3',
+      title: 'Accessories Installation',
+      price: 300,
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos reiciendis accusamus esse mollitia aut',
+      features: [
+        {
+          title: 'Air filter clean/change',
+          description: 'No description',
+        },
+      ],
+    },
+    {
+      id: 'uuid4',
+      title: 'Tyre Change',
+      price: 200,
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos reiciendis accusamus esse mollitia aut',
+      features: [
+        {
+          title: 'Air filter clean/change',
+          description: 'No description',
+        },
+      ],
+    },
+    {
+      id: 'uuid5',
+      title: 'Sticker Modification',
+      price: 200,
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos reiciendis accusamus esse mollitia aut',
+      features: [
+        {
+          title: 'Air filter clean/change',
+          description: 'No description',
         },
       ],
     },
@@ -42,33 +81,43 @@ export default function Home(props: PropTypes) {
   return (
     <ScrollView>
       <View style={globalStyles.container}>
-        <Text style={[globalStyles.fontFamilyRegular]}>
+        <Text style={[globalStyles.textBold, globalStyles.textRegular]}>
           Most popular Packages
         </Text>
-        <Pressable
-          onPress={e => {
-            e.persist();
-            console.log('going to package');
-            navigation.navigate('Package');
-          }}>
-          {serviceList?.map(item => {
-            return (
-              <Card style={styles.cardContainer} key={item?.id}>
+
+        {serviceList?.map(item => {
+          return (
+            <Pressable
+              key={item?.id}
+              onPress={e => {
+                e.persist();
+                navigation.navigate('PackageDetails', {
+                  title: item?.title,
+                  features: item?.features,
+                });
+              }}>
+              <Card style={styles.cardContainer}>
                 <Card.Title
                   title={
-                    <Text variant="headlineSmall">Lorem {item?.title}</Text>
+                    <Text style={globalStyles.textBold} variant="headlineSmall">
+                      {item?.title}
+                    </Text>
                   }
-                  subtitle={<Text>TK {item?.price}</Text>}
+                  subtitle={
+                    <Text style={globalStyles.textRegular}>
+                      TK {item?.price}
+                    </Text>
+                  }
                 />
                 <Card.Content>
-                  <Text style={globalStyles.fontRegular}>
+                  <Text style={globalStyles.textRegular}>
                     {item?.description}
                   </Text>
                 </Card.Content>
               </Card>
-            );
-          })}
-        </Pressable>
+            </Pressable>
+          );
+        })}
       </View>
     </ScrollView>
   );

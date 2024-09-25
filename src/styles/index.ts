@@ -8,13 +8,20 @@ export const globalStyles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
   },
-  fontRegular: {
-    fontSize: 16,
-  },
+
+  // Font family
   fontFamilyRegular: {
     fontFamily: 'Telenor-Regular',
   },
   fontFamilyBold: {
     fontFamily: 'Telenor-Bold',
+  },
+
+  // text
+  textBold: {
+    fontWeight: 'bold',
+  },
+  textRegular: {
+    fontSize: 18,
   },
 });

@@ -1,12 +1,10 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Package from '@/src/screens/Package/Package';
 import Home from '@/src/screens/Home/Home';
-import Login from '@/src/screens/Auth/Login';
-import Signup from '@/src/screens/Auth/Signup';
-import {globalStyles} from '@/src/styles';
-const HomeStack = createNativeStackNavigator();
 
+import {globalStyles} from '@/src/styles';
+import PackageDetails from '@/src/screens/PackageDetails/PackageDetails';
+const HomeStack = createNativeStackNavigator();
 export default function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
@@ -19,11 +17,9 @@ export default function HomeStackScreen() {
           title: 'Home',
         }}
       />
-      <HomeStack.Screen name="Login" component={Login} />
-      <HomeStack.Screen name="Signup" component={Signup} />
       <HomeStack.Screen
-        name="Package"
-        component={Package}
+        name="PackageDetails"
+        component={PackageDetails as any}
         options={{
           headerTitleStyle: globalStyles.fontFamilyRegular,
         }}

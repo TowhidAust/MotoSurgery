@@ -6,6 +6,7 @@ import Signup from '@/src/screens/Auth/Signup';
 import Login from '@/src/screens/Auth/Login';
 import HomeStackScreen from '@/src/navigator/stackScreens/Home/HomeStackScreen';
 import {globalStyles} from '../styles';
+import {StyleSheet} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,10 +28,7 @@ export default function TabNavigator() {
         },
         tabBarActiveTintColor: 'tomato',
         // tabBarInactiveTintColor: 'gray',
-        tabBarLabelStyle: [
-          globalStyles.fontFamilyRegular,
-          globalStyles.fontRegular,
-        ],
+        tabBarLabelStyle: [globalStyles.fontFamilyRegular, styles.tabLabelText],
 
         tabBarStyle: {
           paddingTop: 8,
@@ -44,3 +42,9 @@ export default function TabNavigator() {
     </Tab.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  tabLabelText: {
+    fontSize: 16,
+  },
+});
