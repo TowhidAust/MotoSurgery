@@ -2,22 +2,10 @@ import React, {useState} from 'react';
 import {Pressable, ScrollView, StyleSheet, View} from 'react-native';
 import {globalStyles} from '@/src/styles';
 import {servicePakage} from '@/src/types';
+import type {HomeScreenProps} from '@/src/types';
 import {Card, Text} from 'react-native-paper';
-import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-type RootStackParamList = {
-  Home: undefined;
-  Login: undefined;
-  Signup: undefined;
-};
-
-type Props = NativeStackScreenProps<RootStackParamList, 'Profile'>;
-
-type PropTypes = {
-  navigation: any;
-};
-
-export default function Home(props: PropTypes) {
+export default function Home(props: HomeScreenProps) {
   const {navigation} = props;
   const [serviceList] = useState<servicePakage[]>([
     {
@@ -101,6 +89,7 @@ export default function Home(props: PropTypes) {
               onPress={e => {
                 e.persist();
                 navigation.navigate('PackageDetails', {
+                  packageId: item?.id,
                   title: item?.title,
                   features: item?.features,
                 });

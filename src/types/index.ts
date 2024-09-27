@@ -32,7 +32,11 @@ export type HomeStackParamList = {
   };
 };
 
-export type PackageProps = NativeStackScreenProps<
+export type HomeScreenProps = NativeStackScreenProps<
+  HomeStackParamList,
+  'HomeScreen'
+>;
+export type PackageScreenProps = NativeStackScreenProps<
   HomeStackParamList,
   'PackageDetails'
 >;

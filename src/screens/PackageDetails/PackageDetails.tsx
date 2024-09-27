@@ -2,9 +2,9 @@ import React from 'react';
 import {View} from 'react-native';
 import {globalStyles} from '@/src/styles';
 import {Text} from 'react-native-paper';
-import type {PackageProps} from '@/src/types';
+import type {PackageScreenProps} from '@/src/types';
 
-export default function PackageDetails(props: PackageProps) {
+export default function PackageDetails(props: PackageScreenProps) {
   const {route} = props;
   return (
     <View style={globalStyles.container}>
