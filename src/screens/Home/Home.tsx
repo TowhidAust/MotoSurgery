@@ -3,6 +3,15 @@ import {Pressable, ScrollView, StyleSheet, View} from 'react-native';
 import {globalStyles} from '@/src/styles';
 import {servicePakage} from '@/src/types';
 import {Card, Text} from 'react-native-paper';
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
+
+type RootStackParamList = {
+  Home: undefined;
+  Login: undefined;
+  Signup: undefined;
+};
+
+type Props = NativeStackScreenProps<RootStackParamList, 'Profile'>;
 
 type PropTypes = {
   navigation: any;

@@ -2,13 +2,9 @@ import React from 'react';
 import {View} from 'react-native';
 import {globalStyles} from '@/src/styles';
 import {Text} from 'react-native-paper';
+import type {PackageProps} from '@/src/types';
 
-type PropTypes = {
-  navigation: any;
-  route: any;
-};
-
-export default function PackageDetails(props: PropTypes) {
+export default function PackageDetails(props: PackageProps) {
   const {route} = props;
   return (
     <View style={globalStyles.container}>
@@ -19,7 +15,9 @@ export default function PackageDetails(props: PropTypes) {
 
           {route?.params?.features.map((item: any) => {
             return (
-              <Text style={[globalStyles.textRegular]}>{item?.title}</Text>
+              <Text key={item?.id} style={[globalStyles.textRegular]}>
+                {item?.title}
+              </Text>
             );
           })}
         </View>

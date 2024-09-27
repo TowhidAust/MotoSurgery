@@ -7,8 +7,9 @@ import Login from '@/src/screens/Auth/Login';
 import HomeStackScreen from '@/src/navigator/stackScreens/Home/HomeStackScreen';
 import {globalStyles} from '../styles';
 import {StyleSheet} from 'react-native';
+import type {RootTabParamList} from '../types';
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<RootTabParamList>();
 
 export default function TabNavigator() {
   return (

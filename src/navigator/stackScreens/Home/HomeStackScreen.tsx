@@ -1,10 +1,11 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '@/src/screens/Home/Home';
-
 import {globalStyles} from '@/src/styles';
 import PackageDetails from '@/src/screens/PackageDetails/PackageDetails';
-const HomeStack = createNativeStackNavigator();
+import type {HomeStackParamList} from '@/src/types';
+
+const HomeStack = createNativeStackNavigator<HomeStackParamList>();
 export default function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
@@ -19,7 +20,7 @@ export default function HomeStackScreen() {
       />
       <HomeStack.Screen
         name="PackageDetails"
-        component={PackageDetails as any}
+        component={PackageDetails}
         options={{
           headerTitleStyle: globalStyles.fontFamilyRegular,
         }}
