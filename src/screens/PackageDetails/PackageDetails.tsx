@@ -1,27 +1,53 @@
 import React from 'react';
-import {View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {globalStyles} from '@/src/styles';
-import {Text} from 'react-native-paper';
+import {Button, Text} from 'react-native-paper';
 import type {PackageScreenProps} from '@/src/types';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default function PackageDetails(props: PackageScreenProps) {
   const {route} = props;
   return (
     <View style={globalStyles.container}>
-      <View>
-        <View>
-          <Text style={globalStyles.textRegular}>{route?.params?.title}</Text>
-          <Text style={globalStyles.textRegular}>TK 700</Text>
+      <Text variant="headlineSmall" style={globalStyles.textBold}>
+        {route?.params?.title}
+      </Text>
+      <Text style={globalStyles.textRegular}>TK 700</Text>
 
-          {route?.params?.features.map((item: any) => {
-            return (
-              <Text key={item?.id} style={[globalStyles.textRegular]}>
-                {item?.title}
-              </Text>
-            );
-          })}
-        </View>
-      </View>
+      {route?.params?.features.map(item => {
+        return (
+          <View key={item?.id} style={styles.container}>
+            <View style={styles.icon}>
+              <Icon name="check-box" size={20} color="green" />
+            </View>
+            <View style={styles.feature}>
+              <Text style={globalStyles.textRegular}> {item?.title} </Text>
+            </View>
+          </View>
+        );
+      })}
+      <Button
+        style={styles.bookBtnStyle}
+        mode="contained"
+        onPress={() => console.log('Pressed')}>
+        Book Now
+      </Button>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  icon: {
+    flex: 1,
+  },
+  feature: {
+    flex: 20,
+  },
+  bookBtnStyle: {
+    marginTop: 10,
+  },
+});

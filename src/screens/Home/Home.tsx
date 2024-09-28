@@ -16,65 +16,23 @@ export default function Home(props: HomeScreenProps) {
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos reiciendis accusamus esse mollitia aut',
       features: [
         {
+          id: '1',
           title: 'Air filter clean/change',
           description: 'No description',
         },
-      ],
-    },
-    {
-      id: 'uuid2',
-      title: 'Bike Wash & Polish',
-      price: 200,
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos reiciendis accusamus esse mollitia aut',
-      features: [
         {
-          title: 'Air filter clean/change',
+          id: '2',
+          title: 'Oil Filter & Mobil Change',
           description: 'No description',
         },
-      ],
-    },
-    {
-      id: 'uuid3',
-      title: 'Accessories Installation',
-      price: 300,
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos reiciendis accusamus esse mollitia aut',
-      features: [
         {
-          title: 'Air filter clean/change',
-          description: 'No description',
-        },
-      ],
-    },
-    {
-      id: 'uuid4',
-      title: 'Tyre Change',
-      price: 200,
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos reiciendis accusamus esse mollitia aut',
-      features: [
-        {
-          title: 'Air filter clean/change',
-          description: 'No description',
-        },
-      ],
-    },
-    {
-      id: 'uuid5',
-      title: 'Sticker Modification',
-      price: 200,
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dignissimos reiciendis accusamus esse mollitia aut',
-      features: [
-        {
-          title: 'Air filter clean/change',
+          id: '3',
+          title: 'Mobil Change',
           description: 'No description',
         },
       ],
     },
   ]);
-  useState;
   return (
     <ScrollView>
       <View style={globalStyles.container}>

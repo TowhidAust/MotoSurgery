@@ -2,6 +2,7 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 // ---- (HOME SCREEN) PACKAGE LIST ------
 export interface packageFeatures {
+  id: string;
   title: string;
   description: string;
 }
@@ -16,7 +17,6 @@ export interface servicePakage {
 // ----- API RESPONSE TYPES ------
 
 // ---- REACT NAVIGATION TYPES -----
-// types.ts
 export type RootTabParamList = {
   Home: undefined;
   Login: undefined;
@@ -28,7 +28,7 @@ export type HomeStackParamList = {
   PackageDetails: {
     packageId: string;
     title: string;
-    features: any[];
+    features: packageFeatures[];
   };
 };
 
