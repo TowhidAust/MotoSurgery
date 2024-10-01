@@ -30,6 +30,16 @@ export default function Home(props: HomeScreenProps) {
           title: 'Mobil Change',
           description: 'No description',
         },
+        {
+          id: '4',
+          title: 'Breakpad Clean/Change',
+          description: 'No description',
+        },
+        {
+          id: '5',
+          title: 'Tyre Pressure Check',
+          description: 'No description',
+        },
       ],
     },
   ]);
@@ -39,7 +49,6 @@ export default function Home(props: HomeScreenProps) {
         <Text style={[globalStyles.textBold, globalStyles.textRegular]}>
           Most popular Packages
         </Text>
-
         {serviceList?.map(item => {
           return (
             <Pressable

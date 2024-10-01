@@ -13,7 +13,6 @@ export default function PackageDetails(props: PackageScreenProps) {
         {route?.params?.title}
       </Text>
       <Text style={globalStyles.textRegular}>TK 700</Text>
-
       {route?.params?.features.map(item => {
         return (
           <View key={item?.id} style={styles.container}>
