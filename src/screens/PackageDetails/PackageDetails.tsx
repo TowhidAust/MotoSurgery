@@ -6,7 +6,7 @@ import type {PackageScreenProps} from '@/src/types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default function PackageDetails(props: PackageScreenProps) {
-  const {route} = props;
+  const {route, navigation} = props;
   return (
     <View style={globalStyles.container}>
       <Text variant="headlineSmall" style={globalStyles.textBold}>
@@ -29,7 +29,7 @@ export default function PackageDetails(props: PackageScreenProps) {
       <Button
         style={styles.bookBtnStyle}
         mode="contained"
-        onPress={() => console.log('Pressed')}>
+        onPress={() => navigation.navigate('Booking')}>
         Book Now
       </Button>
     </View>

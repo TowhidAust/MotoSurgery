@@ -14,8 +14,6 @@ export interface servicePakage {
   features: packageFeatures[];
 }
 
-// ----- API RESPONSE TYPES ------
-
 // ---- REACT NAVIGATION TYPES -----
 export type RootTabParamList = {
   Home: undefined;
@@ -30,12 +28,15 @@ export type HomeStackParamList = {
     title: string;
     features: packageFeatures[];
   };
+  Booking: undefined;
 };
 
+// Passing proptypes to screen components
 export type HomeScreenProps = NativeStackScreenProps<
   HomeStackParamList,
   'HomeScreen'
 >;
+
 export type PackageScreenProps = NativeStackScreenProps<
   HomeStackParamList,
   'PackageDetails'

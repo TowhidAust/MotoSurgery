@@ -4,6 +4,7 @@ import Home from '@/src/screens/Home/Home';
 import {globalStyles} from '@/src/styles';
 import PackageDetails from '@/src/screens/PackageDetails/PackageDetails';
 import type {HomeStackParamList} from '@/src/types';
+import Booking from '@/src/screens/Booking/Booking';
 
 const HomeStack = createNativeStackNavigator<HomeStackParamList>();
 export default function HomeStackScreen() {
@@ -25,6 +26,7 @@ export default function HomeStackScreen() {
           headerTitleStyle: globalStyles.fontFamilyRegular,
         }}
       />
+      <HomeStack.Screen name="Booking" component={Booking} />
     </HomeStack.Navigator>
   );
 }
