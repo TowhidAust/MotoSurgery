@@ -41,3 +41,5 @@ export type PackageScreenProps = NativeStackScreenProps<
   HomeStackParamList,
   'PackageDetails'
 >;
+
+// React Native Calendar Types

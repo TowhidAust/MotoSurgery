@@ -9,19 +9,24 @@ export const globalStyles = StyleSheet.create({
     fontWeight: 'bold',
   },
 
-  // Font family
+  // Borders
+  borderRadius: {
+    borderRadius: 8,
+  },
+
+  // Text & Font family
   fontFamilyRegular: {
     fontFamily: 'Telenor-Regular',
   },
   fontFamilyBold: {
     fontFamily: 'Telenor-Bold',
   },
-
-  // text
   textBold: {
     fontWeight: 'bold',
   },
   textRegular: {
     fontSize: 18,
   },
+
+  // Others
 });
