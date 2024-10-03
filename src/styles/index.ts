@@ -1,9 +1,12 @@
 import {StyleSheet} from 'react-native';
 
 export const globalStyles = StyleSheet.create({
+  // containers
   container: {
     padding: 16,
   },
+
+  // Titles
   title: {
     fontSize: 22,
     fontWeight: 'bold',

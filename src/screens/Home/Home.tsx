@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import {Pressable, ScrollView, StyleSheet, View} from 'react-native';
 import {globalStyles} from '@/src/styles';
-import {servicePakage} from '@/src/types';
+import {ServicePakage} from '@/src/types';
 import type {HomeScreenProps} from '@/src/types';
 import {Card, Text} from 'react-native-paper';
 
 export default function Home(props: HomeScreenProps) {
   const {navigation} = props;
-  const [serviceList] = useState<servicePakage[]>([
+  const [serviceList] = useState<ServicePakage[]>([
     {
       id: 'uuid1',
       title: 'Regular Service',
@@ -75,9 +75,7 @@ export default function Home(props: HomeScreenProps) {
                   }
                 />
                 <Card.Content>
-                  <Text style={globalStyles.textRegular}>
-                    {item?.description}
-                  </Text>
+                  <Text>{item?.description}</Text>
                 </Card.Content>
               </Card>
             </Pressable>

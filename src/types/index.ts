@@ -1,19 +1,23 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 // ---- (HOME SCREEN) PACKAGE LIST ------
-export interface packageFeatures {
+export interface PackageFeatures {
   id: string;
   title: string;
   description: string;
 }
-export interface servicePakage {
+export interface ServicePakage {
   id: string;
   title: string;
   price: number;
   description: String;
-  features: packageFeatures[];
+  features: PackageFeatures[];
 }
-
+export interface Slot {
+  date: Date;
+  startTime: string;
+  endTime: string;
+}
 // ---- REACT NAVIGATION TYPES -----
 export type RootTabParamList = {
   Home: undefined;
@@ -26,7 +30,7 @@ export type HomeStackParamList = {
   PackageDetails: {
     packageId: string;
     title: string;
-    features: packageFeatures[];
+    features: PackageFeatures[];
   };
   Booking: undefined;
 };

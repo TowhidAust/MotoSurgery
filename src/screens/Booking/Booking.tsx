@@ -3,9 +3,19 @@ import {StyleSheet, View} from 'react-native';
 import {Card, Text} from 'react-native-paper';
 import {Calendar} from 'react-native-calendars';
 import {globalStyles} from '@/src/styles';
+import {Slot} from '@/src/types';
 
 export default function Booking() {
   const [selectedDate, setSelectedDate] = useState<string>('');
+  // {"dateString": "2024-10-22", "day": 22, "month": 10, "timestamp": 1729555200000, "year": 2024}
+  const [availableSlot] = useState<Slot[]>([
+    {
+      date: new Date(),
+      startTime: '10am',
+      endTime: '11am',
+    },
+  ]);
+
   return (
     <View style={globalStyles.container}>
       <Text variant="headlineSmall" style={styles.selectDateHeadline}>
@@ -36,27 +46,17 @@ export default function Booking() {
       </Text>
 
       <View style={styles.cardContianer}>
-        <View style={styles.slotCard}>
-          <Card>
-            <Card.Content>
-              <Text style={globalStyles.textRegular}>10am - 12am</Text>
-            </Card.Content>
-          </Card>
-        </View>
-        <View style={styles.slotCard}>
-          <Card>
-            <Card.Content>
-              <Text style={globalStyles.textRegular}>10am - 12am</Text>
-            </Card.Content>
-          </Card>
-        </View>
-        <View style={styles.slotCard}>
-          <Card>
-            <Card.Content>
-              <Text style={globalStyles.textRegular}>10am - 12am</Text>
-            </Card.Content>
-          </Card>
-        </View>
+        {availableSlot.map(item => (
+          <View style={styles.slotCard}>
+            <Card>
+              <Card.Content>
+                <Text style={globalStyles.textRegular}>
+                  {item?.startTime} - {item?.endTime}
+                </Text>
+              </Card.Content>
+            </Card>
+          </View>
+        ))}
       </View>
     </View>
   );
