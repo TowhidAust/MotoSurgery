@@ -16,9 +16,6 @@ import {
 } from 'react-native-paper';
 const fontConfig = {
   fontFamily: 'Telenor-Regular',
-  headlineSmall: {
-    fontSize: 25,
-  },
 };
 const theme: MD3Theme = {
   ...MD3LightTheme,

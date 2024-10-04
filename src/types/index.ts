@@ -14,6 +14,7 @@ export interface ServicePakage {
   features: PackageFeatures[];
 }
 export interface Slot {
+  id: string;
   date: Date;
   startTime: string;
   endTime: string;

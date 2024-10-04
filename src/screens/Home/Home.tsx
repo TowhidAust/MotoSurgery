@@ -46,9 +46,7 @@ export default function Home(props: HomeScreenProps) {
   return (
     <ScrollView>
       <View style={globalStyles.container}>
-        <Text style={[globalStyles.textBold, globalStyles.textRegular]}>
-          Most popular Packages
-        </Text>
+        <Text variant="headlineSmall">Most popular Packages</Text>
         {serviceList?.map(item => {
           return (
             <Pressable
@@ -75,7 +73,9 @@ export default function Home(props: HomeScreenProps) {
                   }
                 />
                 <Card.Content>
-                  <Text>{item?.description}</Text>
+                  <Text style={globalStyles.textRegular}>
+                    {item?.description}
+                  </Text>
                 </Card.Content>
               </Card>
             </Pressable>
